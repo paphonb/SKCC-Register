@@ -178,7 +178,7 @@
                         <h3>Suankularb Olympiad in <br />Informatics 2016</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed rhoncus neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sed ultricies velit.
                         </p>
-                        <a class="ui button" href="skoi.html">
+                        <a class="ui button" href="{{route('skoi')}}">
                             <p>
                                 ข้อมูลเพิ่มเติม
                             </p>
@@ -189,7 +189,7 @@
                         <h3>Suankularb Information and technology Contest 2016</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed rhoncus neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sed ultricies velit.
                         </p>
-                        <a class="ui button" href="skic.html">
+                        <a class="ui button" href="{{route('skit')}}">
                             <p>
                                 ข้อมูลเพิ่มเติม
                             </p>
