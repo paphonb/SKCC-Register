@@ -1,12 +1,3 @@
-html {
-  /* IE */
-  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=50%);
-  /* Chrome, Safari */
-  -webkit-filter: grayscale(50%);
-  /* Firefox */
-  filter: grayscale(50%);
-}
-
 h1,h2,h3,h4,h5,h6,p,label,input,.text,.item {
   font-family: 'Kanit', sans-serif !important;
 }
