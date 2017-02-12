@@ -6,12 +6,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="author" content="Suankularb Computer Club">
-    <meta name="description" content="สัปดาห์คอมพิวเตอร์ โรงเรียนสวนกุหลาบวิทยาลัย 2016 มาพร้อมนิทรรศการที่จะให้ทั้งความรู้ และความสนุก
-  และการแข่งขันต่าง ๆ ที่มีเงินรางวัลมูลค่ารวมกว่า 26,000 บาท พร้อมทั้งของรางวัลสุดพิเศษมากมายสำหรับทุกคน">
-    <meta property="og:title" content="Suankularb Computer Week 2016">
+    <meta name="description" content="การตอบปัญหาทางคอมพิวเตอ์รสุดแปลก และแหวกแนวไม่เหมือนใคร และจะไม่มีใครเหมือน พร้อมเงินรางวัลรวมกว่า 10,000 บาท">
+    <meta property="og:title" content="Suankularb Information Technology Contest 2017">
     <meta property="og:image" content="#">
-    <meta property="og:description" content="สัปดาห์คอมพิวเตอร์ โรงเรียนสวนกุหลาบวิทยาลัย 2016 มาพร้อมนิทรรศการที่จะให้ทั้งความรู้ และความสนุก
-  และการแข่งขันต่าง ๆ ที่มีเงินรางวัลมูลค่ารวมกว่า 26,000 บาท พร้อมทั้งของรางวัลสุดพิเศษมากมายสำหรับทุกคน">
+    <meta property="og:description" content="การตอบปัญหาทางคอมพิวเตอ์รสุดแปลก และแหวกแนวไม่เหมือนใคร และจะไม่มีใครเหมือน พร้อมเงินรางวัลรวมกว่า 10,000 บาท">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <!-- Site Icons -->
@@ -30,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 
     <!-- Site Properties -->
-    <title>Suankularb Computer Week 2016 : Register - SKIT</title>
+    <title>Suankularb Computer Week 2017 : Register - SKIT</title>
     <link rel="stylesheet" type="text/css" href="/dist/components/reset.css">
     <link rel="stylesheet" type="text/css" href="/dist/components/site.css">
 
