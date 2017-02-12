@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="author" content="Suankularb Computer Club">
     <meta name="description" content="การแข่งขันการเขียนโปรแกรมคอมพิวเตอร์สุดแปลก และแหวกแนวไม่เหมือนใคร และจะไม่มีใครเหมือน พร้อมเงินรางวัลรวมกว่า 10,000 บาท">
-    <meta property="og:title" content="Suankularb Computer Week 2016">
+    <meta property="og:title" content="Suankularb Olympiad in Informatic 2017">
     <meta property="og:image" content="/img/skcc.png">
     <meta property="og:description" content="การแข่งขันการเขียนโปรแกรมคอมพิวเตอร์สุดแปลก และแหวกแนวไม่เหมือนใคร และจะไม่มีใครเหมือน พร้อมเงินรางวัลรวมกว่า 10,000 บาท">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 
     <!-- Site Properties -->
-    <title>Suankularb Computer Week 2016 : Register - SKOI</title>
+    <title>Suankularb Olympiad in Informatic 2017 : Register</title>
     <link rel="stylesheet" type="text/css" href="/dist/components/reset.css">
     <link rel="stylesheet" type="text/css" href="/dist/components/site.css">
 
