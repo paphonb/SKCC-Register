@@ -14,21 +14,21 @@
 
     <!-- Site Icons -->
     <!-- third-generation iPad with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icons/favicon144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icons/skcc.png">
     <!-- iPhone with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icons/favicon114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icons/skcc.png">
     <!-- first- and second-generation iPad: -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icons/favicon72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icons/skcc.png">
     <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <link rel="apple-touch-icon-precomposed" href="/img/icons/favicon57.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/icons/skcc.png">
     <!-- basic favicon -->
-    <link rel="shortcut icon" href="/img/icons/favicon32.png">
+    <link rel="shortcut icon" href="/img/icons/skcc.png">
 
     <!-- Include Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 
     <!-- Site Properties -->
-    <title>Suankularb Computer Week 2017 : Register - SKIT</title>
+    <title>Suankularb Information Technology Contest 2017 : Register</title>
     <link rel="stylesheet" type="text/css" href="/dist/components/reset.css">
     <link rel="stylesheet" type="text/css" href="/dist/components/site.css">
 
@@ -95,22 +95,7 @@
     <div class="ui medium top fixed hidden menu inverted items">
         <div class="item">
             <div class="ui tiny image">
-                <img src="/img/logo.png">
-            </div>
-            <div class="ui tiny image">
-                <img src="/img/skic.png">
-            </div>
-        </div>
-    </div>
-
-    <!-- Sidebar Menu -->
-    <div class="ui vertical inverted sidebar menu items">
-        <div class="item">
-            <div class="ui tiny image">
-                <img src="/img/logo.png">
-            </div>
-            <div class="ui tiny image">
-                <img src="/img/skic.png">
+                <img src="/img/skit.png">
             </div>
         </div>
     </div>
@@ -120,25 +105,9 @@
     <div class="pusher">
         <div class="ui inverted vertical masthead center aligned segment items">
 
-            <div class="ui container">
-                <div class="ui large secondary inverted pointing menu">
-                    <a class="toc item">
-                        <i class="sidebar icon"></i>
-                    </a>
-                    <div class="item">
-                        <div class="ui tiny image">
-                            <img src="/img/logo.png">
-                        </div>
-                        <div class="middle aligned content">
-                            Suankularb Computer Week 2016 : The Lost Joker
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="ui text container slideInUp animated">
-                <img class="ui huge centered image zoomIn animated" src="/img/skic.png" alt="Logo">
-                <h1 class="ui inverted header slideInUp animated blue">Suankularb Olympiad in Informatics 2016</h1>
+                <img class="ui huge centered image zoomIn animated" src="/img/skit.png" alt="Logo">
+                <h1 class="ui inverted header slideInUp animated blue">Suankularb Information Technology Contest 2017</h1>
             </div>
 
         </div>
