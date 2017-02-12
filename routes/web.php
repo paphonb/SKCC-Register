@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 // SKOI
-Route::get('/skoi','SKOIController@indexphp')->name('skoi');
+Route::get('/skoi','SKOIController@index')->name('skoi');
 Route::get('/skoi/register','SKOIController@register')->name('skoi-register');
 Route::post('/skoi/register','SKOIController@registerSubmit');
 
