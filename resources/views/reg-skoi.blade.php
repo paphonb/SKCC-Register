@@ -154,7 +154,7 @@
         <br/>
         <div class="ui middle aligned stackable grid container">
             <div id="result" class="row">
-                @if (count($errors) > 0)
+                @if (count($errors) > 0 || isset($error))
                     <div class="ui error message">
                         <div class="header">
                             ข้อผิดพลาด

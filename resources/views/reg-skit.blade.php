@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 
     <!-- Site Properties -->
-    <title>Suankularb Computer Week 2016 : Register - SKIC</title>
+    <title>Suankularb Computer Week 2016 : Register - SKIT</title>
     <link rel="stylesheet" type="text/css" href="/dist/components/reset.css">
     <link rel="stylesheet" type="text/css" href="/dist/components/site.css">
 
@@ -66,6 +66,7 @@
     <script src="/dist/components/sidebar.js"></script>
     <script src="/dist/components/transition.js"></script>
     <script src="/js/jquery.maskedinput.min.js"></script>
+    <script src="/js/skcc.js"></script>
     <script>
         $(document)
             .ready(function() {
@@ -144,219 +145,255 @@
 
         </div>
 
-        <div class="ui inverted basic fluid segment div">
-            <div class="ui fluid container">
-                <img class="ui fluid image" src="/img/div.png" />
-            </div>
+    <div class="ui inverted basic fluid segment div">
+        <div class="ui fluid container">
+            <img class="ui fluid image" src="/img/div.png"/>
         </div>
-
-        <div class="ui vertical stripe segment">
-            <h2 class="ui header centered blue" style="font-size: 2.5em;">สมัครเข้าร่วมการแข่งขัน</h2>
-            <br />
-            <div class="ui middle aligned stackable grid container">
-                <div class="row">
-                    <div class="fluid wide column">
-                        <form class="ui form">
-                            <h2 class="ui dividing header">รายละเอียดทีม</h2>
-                            <div class="field">
-                                <label>ชื่อทีม</label>
-                                <input type="text" name="team-name" placeholder="ชื่อทีม ex. MoZaA">
-                            </div>
-                            <div class="field">
-                                <label>โรงเรียน</label>
-                                <input type="text" name="school" placeholder="โรงเรียน ex. โรงเรียนสวนกุหลาบวิทยาลัย">
-                            </div>
-                            <div class="two fields">
-                                <div class="field">
-                                    <label>ชื่อ - สกุลอาจารย์ผู้ควบคุมทีม</label>
-                                    <input type="text" name="teacher-name" placeholder="ชื่อ-สกุลอาจารย์ ex. สุดหล่อ ตั้งใจเรียน">
-                                </div>
-                                <div class="field">
-                                    <label>เบอร์โทรศัพท์อาจารย์ผู้ควบคุมทีม</label>
-                                    <input type="tel" name="teacher-tel" id="tel-t" placeholder="เบอร์โทรศัพท์อาจารย์ ex. 089-876-5432">
-                                </div>
-                            </div>
-                            <h2 class="ui dividing header">รายละเอียดผู้เข้าแข่งขันคนที่ 1 (หัวหน้าทีม)</h2>
-                            <div class="three fields">
-                                <div class="field">
-                                    <label>คำนำหน้านาม</label>
-                                    <div class="ui selection dropdown">
-                                        <input type="hidden" name="one-intro-name">
-                                        <i class="dropdown icon"></i>
-                                        <div class="default text">คำนำหน้านาม</div>
-                                        <div class="menu">
-                                            <div class="item" data-value="เด็กชาย">เด็กชาย</div>
-                                            <div class="item" data-value="เด็กหญิง">เด็กหญิง</div>
-                                            <div class="item" data-value="นาย">นาย</div>
-                                            <div class="item" data-value="นางสาว">นางสาว</div>
-                                            <div class="item" data-value="นาง">นาง</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <label>ชื่อ</label>
-                                    <input type="text" name="one-name" placeholder="ชื่อ ex. รักชาติ">
-                                </div>
-                                <div class="field">
-                                    <label>สกุล</label>
-                                    <input type="text" name="one-last-name" placeholder="นามสกุล ex. รักแผ่นดิน">
-                                </div>
-                            </div>
-                            <div class="three fields">
-                                <div class="field">
-                                    <label>ระดับชั้น</label>
-                                    <div class="ui selection dropdown">
-                                        <input type="hidden" name="one-education">
-                                        <i class="dropdown icon"></i>
-                                        <div class="default text">ระดับชั้น</div>
-                                        <div class="menu">
-                                            <div class="item" data-value="ม.1">ม.1</div>
-                                            <div class="item" data-value="ม.2">ม.2</div>
-                                            <div class="item" data-value="ม.3">ม.3</div>
-                                            <div class="item" data-value="ม.4">ม.4</div>
-                                            <div class="item" data-value="ม.5">ม.5</div>
-                                            <div class="item" data-value="ม.6">ม.6</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <label>เบอร์โทรศัพท์</label>
-                                    <input type="tel" name="one-tel" id="tel-one" placeholder="เบอร์โทรศัพท์ ex. 089-876-5432">
-                                </div>
-                                <div class="field">
-                                    <label>Email</label>
-                                    <input type="email" name="one-email" placeholder="Email ex. computerclub@sk.ac.th">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label>Facebook</label>
-                                <input type="text" name="one-fb" placeholder="Facebook ex. สุดหล่อ หล่อสุด">
-                            </div>
-                            <h2 class="ui dividing header">รายละเอียดผู้เข้าแข่งขันคนที่ 2</h2>
-                            <div class="three fields">
-                                <div class="field">
-                                    <label>คำนำหน้านาม</label>
-                                    <div class="ui selection dropdown">
-                                        <input type="hidden" name="two-intro-name">
-                                        <i class="dropdown icon"></i>
-                                        <div class="default text">คำนำหน้านาม</div>
-                                        <div class="menu">
-                                            <div class="item" data-value="เด็กชาย">เด็กชาย</div>
-                                            <div class="item" data-value="เด็กหญิง">เด็กหญิง</div>
-                                            <div class="item" data-value="นาย">นาย</div>
-                                            <div class="item" data-value="นางสาว">นางสาว</div>
-                                            <div class="item" data-value="นาง">นาง</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <label>ชื่อ</label>
-                                    <input type="text" name="two-name" placeholder="ชื่อ ex. รักชาติ">
-                                </div>
-                                <div class="field">
-                                    <label>สกุล</label>
-                                    <input type="text" name="two-last-name" placeholder="นามสกุล ex. รักแผ่นดิน">
-                                </div>
-                            </div>
-                            <div class="three fields">
-                                <div class="field">
-                                    <label>ระดับชั้น</label>
-                                    <div class="ui selection dropdown">
-                                        <input type="hidden" name="two-education">
-                                        <i class="dropdown icon"></i>
-                                        <div class="default text">ระดับชั้น</div>
-                                        <div class="menu">
-                                            <div class="item" data-value="ม.1">ม.1</div>
-                                            <div class="item" data-value="ม.2">ม.2</div>
-                                            <div class="item" data-value="ม.3">ม.3</div>
-                                            <div class="item" data-value="ม.4">ม.4</div>
-                                            <div class="item" data-value="ม.5">ม.5</div>
-                                            <div class="item" data-value="ม.6">ม.6</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <label>เบอร์โทรศัพท์</label>
-                                    <input type="tel" name="two-tel" id="tel-two" placeholder="เบอร์โทรศัพท์ ex. 089-876-5432">
-                                </div>
-                                <div class="field">
-                                    <label>Email</label>
-                                    <input type="email" name="two-email" placeholder="Email ex. computerclub@sk.ac.th">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label>Facebook</label>
-                                <input type="text" name="two-fb" placeholder="Facebook ex. สุดหล่อ หล่อสุด">
-                            </div>
-                            <h2 class="ui dividing header">รายละเอียดผู้เข้าแข่งขันคนที่ 3</h2>
-                            <div class="three fields">
-                                <div class="field">
-                                    <label>คำนำหน้านาม</label>
-                                    <div class="ui selection dropdown">
-                                        <input type="hidden" name="three-intro-name">
-                                        <i class="dropdown icon"></i>
-                                        <div class="default text">คำนำหน้านาม</div>
-                                        <div class="menu">
-                                            <div class="item" data-value="เด็กชาย">เด็กชาย</div>
-                                            <div class="item" data-value="เด็กหญิง">เด็กหญิง</div>
-                                            <div class="item" data-value="นาย">นาย</div>
-                                            <div class="item" data-value="นางสาว">นางสาว</div>
-                                            <div class="item" data-value="นาง">นาง</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <label>ชื่อ</label>
-                                    <input type="text" name="three-name" placeholder="ชื่อ ex. รักชาติ">
-                                </div>
-                                <div class="field">
-                                    <label>สกุล</label>
-                                    <input type="text" name="three-last-name" placeholder="นามสกุล ex. รักแผ่นดิน">
-                                </div>
-                            </div>
-                            <div class="three fields">
-                                <div class="field">
-                                    <label>ระดับชั้น</label>
-                                    <div class="ui selection dropdown">
-                                        <input type="hidden" name="three-education">
-                                        <i class="dropdown icon"></i>
-                                        <div class="default text">ระดับชั้น</div>
-                                        <div class="menu">
-                                            <div class="item" data-value="ม.1">ม.1</div>
-                                            <div class="item" data-value="ม.2">ม.2</div>
-                                            <div class="item" data-value="ม.3">ม.3</div>
-                                            <div class="item" data-value="ม.4">ม.4</div>
-                                            <div class="item" data-value="ม.5">ม.5</div>
-                                            <div class="item" data-value="ม.6">ม.6</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <label>เบอร์โทรศัพท์</label>
-                                    <input type="tel" name="three-tel" id="tel-three" placeholder="เบอร์โทรศัพท์ ex. 089-876-5432">
-                                </div>
-                                <div class="field">
-                                    <label>Email</label>
-                                    <input type="email" name="three-email" placeholder="Email ex. computerclub@sk.ac.th">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label>Facebook</label>
-                                <input type="text" name="three-fb" placeholder="Facebook ex. สุดหล่อ หล่อสุด">
-                            </div>
-                            <div class="ui divider"></div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" tabindex="0" class="hidden">
-                                    <label>ข้าพเจ้ายอมรับข้อกำหนด กฎ กติกา และเงื่อนไขการแข่งขัน และขอยืนยันว่าข้อมูลทุกอย่างเป็นความจริง</label>
-                                </div>
-                            </div>
-                            <button class="ui button green" type="submit">Submit</button>
-                        </form>
+    </div>
+    <div class="ui vertical stripe segment">
+        <h2 class="ui header centered blue" style="font-size: 2.5em;">สมัครเข้าร่วมการแข่งขัน</h2>
+        <br/>
+        <div class="ui middle aligned stackable grid container">
+            <div id="result" class="row">
+                @if (count($errors) > 0 || isset($error))
+                    <div class="ui error message">
+                        <div class="header">
+                            ข้อผิดพลาด
+                        </div>
+                        <p>
+                            มีปัญหาบางอย่างกับข้อมูลที่คุณได้กรอกมา โปรดกรุณาแก้ไขและลองใหม่อีกครั้ง
+                        </p>
                     </div>
+                @elseif (isset($exists))
+                    <div class="ui error message">
+                        <div class="header">
+                            ข้อผิดพลาด
+                        </div>
+                        <p>
+                            ชื่อทีมมีคนใช้ไปแล้ว
+                        </p>
+                    </div>
+                @elseif (isset($registered))
+                    <div class="ui green message">
+                        <div class="header">
+                            สำเร็จ
+                        </div>
+                        <p>
+                            การสมัครเสร็จสมบูรณื หากมีปัญหากรือข้อสงสัยอะไร โปรดกรุณาติดต่อที่ช่องทางติดต่อของเรา
+                        </p>
+                    </div>
+                @endif
+            </div>
+            <div class="row">
+                <div id="register-form" class="fluid wide column">
+                    <form class="ui form" method="post">
+                        {{csrf_field()}}
+                        <h2 class="ui dividing header">รายละเอียดทีม</h2>
+                        <div class="field">
+                            <label>ชื่อทีม</label>
+                            <input type="text" name="team-name" placeholder="ชื่อทีม ex. MoZaA">
+                        </div>
+                        <div class="field">
+                            <label>โรงเรียน</label>
+                            <input type="text" name="school" placeholder="โรงเรียน ex. โรงเรียนสวนกุหลาบวิทยาลัย">
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label>ชื่อ - สกุลอาจารย์ผู้ควบคุมทีม</label>
+                                <input type="text" name="teacher-name"
+                                       placeholder="ชื่อ-สกุลอาจารย์ ex. สุดหล่อ ตั้งใจเรียน">
+                            </div>
+                            <div class="field">
+                                <label>เบอร์โทรศัพท์อาจารย์ผู้ควบคุมทีม</label>
+                                <input type="tel" name="teacher-tel" id="tel-t"
+                                       placeholder="เบอร์โทรศัพท์อาจารย์ ex. 089-876-5432">
+                            </div>
+                        </div>
+                        <h2 class="ui dividing header">รายละเอียดผู้เข้าแข่งขันคนที่ 1 (หัวหน้าทีม)</h2>
+                        <div class="three fields">
+                            <div class="field">
+                                <label>คำนำหน้านาม</label>
+                                <div class="ui selection dropdown">
+                                    <input type="hidden" name="one-intro-name">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">คำนำหน้านาม</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="เด็กชาย">เด็กชาย</div>
+                                        <div class="item" data-value="เด็กหญิง">เด็กหญิง</div>
+                                        <div class="item" data-value="นาย">นาย</div>
+                                        <div class="item" data-value="นางสาว">นางสาว</div>
+                                        <div class="item" data-value="นาง">นาง</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>ชื่อ</label>
+                                <input type="text" name="one-name" placeholder="ชื่อ ex. รักชาติ">
+                            </div>
+                            <div class="field">
+                                <label>สกุล</label>
+                                <input type="text" name="one-last-name" placeholder="นามสกุล ex. รักแผ่นดิน">
+                            </div>
+                        </div>
+                        <div class="three fields">
+                            <div class="field">
+                                <label>ระดับชั้น</label>
+                                <div class="ui selection dropdown">
+                                    <input type="hidden" name="one-education">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">ระดับชั้น</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="ม.1">ม.1</div>
+                                        <div class="item" data-value="ม.2">ม.2</div>
+                                        <div class="item" data-value="ม.3">ม.3</div>
+                                        <div class="item" data-value="ม.4">ม.4</div>
+                                        <div class="item" data-value="ม.5">ม.5</div>
+                                        <div class="item" data-value="ม.6">ม.6</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>เบอร์โทรศัพท์</label>
+                                <input type="tel" name="one-tel" id="tel-one"
+                                       placeholder="เบอร์โทรศัพท์ ex. 089-876-5432">
+                            </div>
+                            <div class="field">
+                                <label>Email</label>
+                                <input type="email" name="one-email" placeholder="Email ex. computerclub@sk.ac.th">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Facebook</label>
+                            <input type="text" name="one-fb" placeholder="Facebook ex. สุดหล่อ หล่อสุด">
+                        </div>
+                        <h2 class="ui dividing header">รายละเอียดผู้เข้าแข่งขันคนที่ 2</h2>
+                        <div class="three fields">
+                            <div class="field">
+                                <label>คำนำหน้านาม</label>
+                                <div class="ui selection dropdown">
+                                    <input type="hidden" name="two-intro-name">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">คำนำหน้านาม</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="เด็กชาย">เด็กชาย</div>
+                                        <div class="item" data-value="เด็กหญิง">เด็กหญิง</div>
+                                        <div class="item" data-value="นาย">นาย</div>
+                                        <div class="item" data-value="นางสาว">นางสาว</div>
+                                        <div class="item" data-value="นาง">นาง</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>ชื่อ</label>
+                                <input type="text" name="two-name" placeholder="ชื่อ ex. รักชาติ">
+                            </div>
+                            <div class="field">
+                                <label>สกุล</label>
+                                <input type="text" name="two-last-name" placeholder="นามสกุล ex. รักแผ่นดิน">
+                            </div>
+                        </div>
+                        <div class="three fields">
+                            <div class="field">
+                                <label>ระดับชั้น</label>
+                                <div class="ui selection dropdown">
+                                    <input type="hidden" name="two-education">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">ระดับชั้น</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="ม.1">ม.1</div>
+                                        <div class="item" data-value="ม.2">ม.2</div>
+                                        <div class="item" data-value="ม.3">ม.3</div>
+                                        <div class="item" data-value="ม.4">ม.4</div>
+                                        <div class="item" data-value="ม.5">ม.5</div>
+                                        <div class="item" data-value="ม.6">ม.6</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>เบอร์โทรศัพท์</label>
+                                <input type="tel" name="two-tel" id="tel-two"
+                                       placeholder="เบอร์โทรศัพท์ ex. 089-876-5432">
+                            </div>
+                            <div class="field">
+                                <label>Email</label>
+                                <input type="email" name="two-email" placeholder="Email ex. computerclub@sk.ac.th">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Facebook</label>
+                            <input type="text" name="two-fb" placeholder="Facebook ex. สุดหล่อ หล่อสุด">
+                        </div>
+                        <h2 class="ui dividing header">รายละเอียดผู้เข้าแข่งขันคนที่ 3</h2>
+                        <div class="three fields">
+                            <div class="field">
+                                <label>คำนำหน้านาม</label>
+                                <div class="ui selection dropdown">
+                                    <input type="hidden" name="three-intro-name">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">คำนำหน้านาม</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="เด็กชาย">เด็กชาย</div>
+                                        <div class="item" data-value="เด็กหญิง">เด็กหญิง</div>
+                                        <div class="item" data-value="นาย">นาย</div>
+                                        <div class="item" data-value="นางสาว">นางสาว</div>
+                                        <div class="item" data-value="นาง">นาง</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>ชื่อ</label>
+                                <input type="text" name="three-name" placeholder="ชื่อ ex. รักชาติ">
+                            </div>
+                            <div class="field">
+                                <label>สกุล</label>
+                                <input type="text" name="three-last-name" placeholder="นามสกุล ex. รักแผ่นดิน">
+                            </div>
+                        </div>
+                        <div class="three fields">
+                            <div class="field">
+                                <label>ระดับชั้น</label>
+                                <div class="ui selection dropdown">
+                                    <input type="hidden" name="three-education">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">ระดับชั้น</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="ม.1">ม.1</div>
+                                        <div class="item" data-value="ม.2">ม.2</div>
+                                        <div class="item" data-value="ม.3">ม.3</div>
+                                        <div class="item" data-value="ม.4">ม.4</div>
+                                        <div class="item" data-value="ม.5">ม.5</div>
+                                        <div class="item" data-value="ม.6">ม.6</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>เบอร์โทรศัพท์</label>
+                                <input type="tel" name="three-tel" id="tel-three"
+                                       placeholder="เบอร์โทรศัพท์ ex. 089-876-5432">
+                            </div>
+                            <div class="field">
+                                <label>Email</label>
+                                <input type="email" name="three-email" placeholder="Email ex. computerclub@sk.ac.th">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Facebook</label>
+                            <input type="text" name="three-fb" placeholder="Facebook ex. สุดหล่อ หล่อสุด">
+                        </div>
+                        <div class="ui divider"></div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input id="agree" type="checkbox" tabindex="0" class="hidden">
+                                <label>ข้าพเจ้ายอมรับข้อกำหนด กฎ กติกา และเงื่อนไขการแข่งขัน
+                                    และขอยืนยันว่าข้อมูลทุกอย่างเป็นความจริง</label>
+                            </div>
+                        </div>
+                        <button class="ui button green" type="submit" onclick="return validateCheckbox('agree')">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
 
         <div class="ui inverted basic fluid segment fdiv">
             <div class="ui fluid container">

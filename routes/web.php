@@ -23,7 +23,7 @@ Route::post('/skoi/register','SKOIController@registerSubmit');
 // SKIT
 Route::get('/skit','SKITController@index')->name('skit');
 Route::get('/skit/register','SKITController@register')->name('skit-register');
-Route::post('/skit/register','SKOIController@registerSubmit');
+Route::post('/skit/register','SKITController@registerSubmit');
 
 // Game Master Camp
 Route::get('/game-master','GameMasterCampController@index');
