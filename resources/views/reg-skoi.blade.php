@@ -6,25 +6,23 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="author" content="Suankularb Computer Club">
-    <meta name="description" content="สัปดาห์คอมพิวเตอร์ โรงเรียนสวนกุหลาบวิทยาลัย 2016 มาพร้อมนิทรรศการที่จะให้ทั้งความรู้ และความสนุก
-  และการแข่งขันต่าง ๆ ที่มีเงินรางวัลมูลค่ารวมกว่า 26,000 บาท พร้อมทั้งของรางวัลสุดพิเศษมากมายสำหรับทุกคน">
+    <meta name="description" content="การแข่งขันการเขียนโปรแกรมคอมพิวเตอร์สุดแปลก และแหวกแนวไม่เหมือนใคร และจะไม่มีใครเหมือน พร้อมเงินรางวัลรวมกว่า 10,000 บาท">
     <meta property="og:title" content="Suankularb Computer Week 2016">
-    <meta property="og:image" content="#">
-    <meta property="og:description" content="สัปดาห์คอมพิวเตอร์ โรงเรียนสวนกุหลาบวิทยาลัย 2016 มาพร้อมนิทรรศการที่จะให้ทั้งความรู้ และความสนุก
-  และการแข่งขันต่าง ๆ ที่มีเงินรางวัลมูลค่ารวมกว่า 26,000 บาท พร้อมทั้งของรางวัลสุดพิเศษมากมายสำหรับทุกคน">
+    <meta property="og:image" content="/img/skcc.png">
+    <meta property="og:description" content="การแข่งขันการเขียนโปรแกรมคอมพิวเตอร์สุดแปลก และแหวกแนวไม่เหมือนใคร และจะไม่มีใครเหมือน พร้อมเงินรางวัลรวมกว่า 10,000 บาท">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <!-- Site Icons -->
     <!-- third-generation iPad with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icons/favicon144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/skcc.png">
     <!-- iPhone with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icons/favicon114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/skcc.png">
     <!-- first- and second-generation iPad: -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icons/favicon72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/skcc.png">
     <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <link rel="apple-touch-icon-precomposed" href="/img/icons/favicon57.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/skcc.png">
     <!-- basic favicon -->
-    <link rel="shortcut icon" href="/img/icons/favicon32.png">
+    <link rel="shortcut icon" href="/img/skcc.png">
 
     <!-- Include Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
@@ -96,21 +94,6 @@
 <div class="ui medium top fixed hidden menu inverted items">
     <div class="item">
         <div class="ui tiny image">
-            <img src="/img/logo.png">
-        </div>
-        <div class="ui tiny image">
-            <img src="/img/skoi.png">
-        </div>
-    </div>
-</div>
-
-<!-- Sidebar Menu -->
-<div class="ui vertical inverted sidebar menu items">
-    <div class="item">
-        <div class="ui tiny image">
-            <img src="/img/logo.png">
-        </div>
-        <div class="ui tiny image">
             <img src="/img/skoi.png">
         </div>
     </div>
@@ -121,25 +104,9 @@
 <div class="pusher">
     <div class="ui inverted vertical masthead center aligned segment items">
 
-        <div class="ui container">
-            <div class="ui large secondary inverted pointing menu">
-                <a class="toc item">
-                    <i class="sidebar icon"></i>
-                </a>
-                <div class="item">
-                    <div class="ui tiny image">
-                        <img src="/img/logo.png">
-                    </div>
-                    <div class="middle aligned content">
-                        Suankularb Computer Week 2016 : The Lost Joker
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="ui text container slideInUp animated">
             <img class="ui huge centered image zoomIn animated" src="/img/skoi.png" alt="Logo">
-            <h1 class="ui inverted header slideInUp animated gold">Suankularb Olympiad in Informatics 2016</h1>
+            <h1 class="ui inverted header slideInUp animated gold">Suankularb Olympiad in Informatics 2017</h1>
         </div>
 
     </div>
