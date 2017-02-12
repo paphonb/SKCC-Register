@@ -8,7 +8,7 @@
     <meta name="author" content="Suankularb Computer Club">
     <meta name="description" content="การตอบปัญหาทางคอมพิวเตอ์รสุดแปลก และแหวกแนวไม่เหมือนใคร และจะไม่มีใครเหมือน พร้อมเงินรางวัลรวมกว่า 10,000 บาท">
     <meta property="og:title" content="Suankularb Information Technology Contest 2017">
-    <meta property="og:image" href="/img/skcc.png">
+    <meta property="og:image" content="/img/skcc.png">
     <meta property="og:description" content="การตอบปัญหาทางคอมพิวเตอ์รสุดแปลก และแหวกแนวไม่เหมือนใคร และจะไม่มีใครเหมือน พร้อมเงินรางวัลรวมกว่า 10,000 บาท">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
