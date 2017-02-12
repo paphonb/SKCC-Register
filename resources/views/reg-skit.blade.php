@@ -14,13 +14,13 @@
 
     <!-- Site Icons -->
     <!-- third-generation iPad with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icons/skcc.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/skcc.png">
     <!-- iPhone with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icons/skcc.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/skcc.png">
     <!-- first- and second-generation iPad: -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icons/skcc.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/skcc.png">
     <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <link rel="apple-touch-icon-precomposed" href="/img/icons/skcc.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/skcc.png">
     <!-- basic favicon -->
     <link rel="shortcut icon" href="/img/icons/skcc.png">
 
