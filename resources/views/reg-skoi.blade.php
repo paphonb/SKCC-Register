@@ -289,7 +289,7 @@
                             <label>Facebook</label>
                             <input type="text" name="two-fb" placeholder="Facebook ex. สุดหล่อ หล่อสุด">
                         </div>
-                        <h2 class="ui dividing header">รายละเอียดผู้เข้าแข่งขันคนที่ 3</h2>
+                    <!--<h2 class="ui dividing header">รายละเอียดผู้เข้าแข่งขันคนที่ 3</h2>
                         <div class="three fields">
                             <div class="field">
                                 <label>คำนำหน้านาม</label>
@@ -345,7 +345,7 @@
                         <div class="field">
                             <label>Facebook</label>
                             <input type="text" name="three-fb" placeholder="Facebook ex. สุดหล่อ หล่อสุด">
-                        </div>
+                        </div>-->
                         <div class="ui divider"></div>
                         <div class="field">
                             <div class="ui checkbox">
