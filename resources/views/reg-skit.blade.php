@@ -22,7 +22,7 @@
     <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
     <link rel="apple-touch-icon-precomposed" href="/img/skcc.png">
     <!-- basic favicon -->
-    <link rel="shortcut icon" href="/img/icons/skcc.png">
+    <link rel="shortcut icon" href="/img/skcc.png">
 
     <!-- Include Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
