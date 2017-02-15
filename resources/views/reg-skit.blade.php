@@ -29,41 +29,41 @@
 
     <!-- Site Properties -->
     <title>Suankularb Information Technology Contest 2017 : Register</title>
-    <link rel="stylesheet" type="text/css" href="/dist/components/reset.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/site.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/site.min.css">
 
-    <link rel="stylesheet" type="text/css" href="/dist/components/container.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/grid.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/header.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/image.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/menu.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/container.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/grid.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/header.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/image.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/menu.min.css">
 
-    <link rel="stylesheet" type="text/css" href="/dist/components/divider.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/dropdown.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/segment.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/button.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/checkbox.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/input.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/list.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/icon.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/form.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/sidebar.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/table.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/transition.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/divider.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/dropdown.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/segment.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/button.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/checkbox.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/input.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/list.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/icon.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/form.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/sidebar.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/table.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/transition.min.css">
 
     <!-- Include CSS -->
-    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="/css/style.css">
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="/dist/components/form.js"></script>
-    <script src="/dist/components/checkbox.js"></script>
-    <script src="/dist/components/dropdown.js"></script>
-    <script src="/dist/components/visibility.js"></script>
-    <script src="/dist/components/sidebar.js"></script>
-    <script src="/dist/components/transition.js"></script>
-    <script src="/js/jquery.maskedinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/form.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/checkbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/dropdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/visibility.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/sidebar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/transition.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="/js/skcc.js"></script>
     <script>
         $(document)
