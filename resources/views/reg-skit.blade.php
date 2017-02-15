@@ -371,14 +371,14 @@
         <div class="ui inverted vertical footer segment">
             <div class="ui container">
                 <div class="ui inverted divider fluid"></div>
-                <div class="ui inverted height grid">
-                    <div class="two wide column">
-                        <img class="ui small image middle" src="/img/skcc.png" alt="Suankularb Computer Club">
-                    </div>
-                    <div class="twelve wide column middle">
-                        <p>
-                            <br> ชุมนุมคอมพิวเตอร์ โรงเรียนสวนกุหลาบวิทยาลัย<br /> อาคารสวนกุหลาบรำลึก (อาคาร 6) ชั้น 3<br /> 88 ถนนตรีเพชร แขวงวังบูรพาภิรมย์ เขตพระนคร กรุงเทพมหานคร 10200
-                        </p>
+                <div class="ui items">
+                    <div class="item">
+                        <div class="ui tiny image">
+                            <img src="img/skcc.png">
+                        </div>
+                        <div class="middle aligned centered content hide-content">
+                            ชุมนุมคอมพิวเตอร์ โรงเรียนสวนกุหลาบวิทยาลัย<br /> อาคารสวนกุหลาบรำลึก (อาคาร 6) ชั้น 3<br /> 88 ถนนตรีเพชร แขวงวังบูรพาภิรมย์ เขตพระนคร กรุงเทพมหานคร 10200
+                        </div>
                     </div>
                 </div>
             </div>
