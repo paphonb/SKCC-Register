@@ -35,7 +35,7 @@ class SKOIController extends Controller
         $teacherTel = $request->input('teacher-tel');
         $students = [];
         // The first one will be a team leader
-        foreach (['one', 'two', 'three'] as $no) {
+        foreach (['one', 'two'] as $no) {
             $students[] = [
                 'namePrefix' => $request->input($no . '-' . 'intro-name'),
                 'firstName' => $request->input($no . '-' . 'name'),

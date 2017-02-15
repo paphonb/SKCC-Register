@@ -6,66 +6,64 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="author" content="Suankularb Computer Club">
-    <meta name="description" content="สัปดาห์คอมพิวเตอร์ โรงเรียนสวนกุหลาบวิทยาลัย 2016 มาพร้อมนิทรรศการที่จะให้ทั้งความรู้ และความสนุก
-  และการแข่งขันต่าง ๆ ที่มีเงินรางวัลมูลค่ารวมกว่า 26,000 บาท พร้อมทั้งของรางวัลสุดพิเศษมากมายสำหรับทุกคน">
-    <meta property="og:title" content="Suankularb Computer Week 2016">
-    <meta property="og:image" content="#">
-    <meta property="og:description" content="สัปดาห์คอมพิวเตอร์ โรงเรียนสวนกุหลาบวิทยาลัย 2016 มาพร้อมนิทรรศการที่จะให้ทั้งความรู้ และความสนุก
-  และการแข่งขันต่าง ๆ ที่มีเงินรางวัลมูลค่ารวมกว่า 26,000 บาท พร้อมทั้งของรางวัลสุดพิเศษมากมายสำหรับทุกคน">
+    <meta name="description" content="การแข่งขันตอบปัญหาทางคอมพิวเตอร์สุดแปลก และแหวกแนวไม่เหมือนใคร และจะไม่มีใครเหมือน พร้อมเงินรางวัลรวมกว่า 10,000 บาท">
+    <meta property="og:title" content="Suankularb Information Technology Contest 2017">
+    <meta property="og:image" content="/img/skcc.png">
+    <meta property="og:description" content="การแข่งขันตอบปัญหาทางคอมพิวเตอร์สุดแปลก และแหวกแนวไม่เหมือนใคร และจะไม่มีใครเหมือน พร้อมเงินรางวัลรวมกว่า 10,000 บาท">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <!-- Site Icons -->
     <!-- third-generation iPad with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icons/favicon144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/skcc.png">
     <!-- iPhone with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icons/favicon114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/skcc.png">
     <!-- first- and second-generation iPad: -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icons/favicon72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/skcc.png">
     <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <link rel="apple-touch-icon-precomposed" href="/img/icons/favicon57.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/skcc.png">
     <!-- basic favicon -->
-    <link rel="shortcut icon" href="/img/icons/favicon32.png">
+    <link rel="shortcut icon" href="/img/skcc.png">
 
     <!-- Include Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 
     <!-- Site Properties -->
-    <title>Suankularb Computer Week 2016 : Register - SKIT</title>
-    <link rel="stylesheet" type="text/css" href="/dist/components/reset.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/site.css">
+    <title>Suankularb Information Technology Contest 2017 : Register</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/site.min.css">
 
-    <link rel="stylesheet" type="text/css" href="/dist/components/container.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/grid.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/header.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/image.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/menu.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/container.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/grid.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/header.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/image.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/menu.min.css">
 
-    <link rel="stylesheet" type="text/css" href="/dist/components/divider.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/dropdown.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/segment.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/button.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/checkbox.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/input.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/list.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/icon.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/form.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/sidebar.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/table.css">
-    <link rel="stylesheet" type="text/css" href="/dist/components/transition.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/divider.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/dropdown.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/segment.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/button.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/checkbox.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/input.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/list.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/icon.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/form.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/sidebar.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/table.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/transition.min.css">
 
     <!-- Include CSS -->
-    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="/css/style.css">
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="/dist/components/form.js"></script>
-    <script src="/dist/components/checkbox.js"></script>
-    <script src="/dist/components/dropdown.js"></script>
-    <script src="/dist/components/visibility.js"></script>
-    <script src="/dist/components/sidebar.js"></script>
-    <script src="/dist/components/transition.js"></script>
-    <script src="/js/jquery.maskedinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/form.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/checkbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/dropdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/visibility.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/sidebar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/transition.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="/js/skcc.js"></script>
     <script>
         $(document)
@@ -97,22 +95,7 @@
     <div class="ui medium top fixed hidden menu inverted items">
         <div class="item">
             <div class="ui tiny image">
-                <img src="/img/logo.png">
-            </div>
-            <div class="ui tiny image">
-                <img src="/img/skic.png">
-            </div>
-        </div>
-    </div>
-
-    <!-- Sidebar Menu -->
-    <div class="ui vertical inverted sidebar menu items">
-        <div class="item">
-            <div class="ui tiny image">
-                <img src="/img/logo.png">
-            </div>
-            <div class="ui tiny image">
-                <img src="/img/skic.png">
+                <img src="/img/skit.png">
             </div>
         </div>
     </div>
@@ -122,25 +105,9 @@
     <div class="pusher">
         <div class="ui inverted vertical masthead center aligned segment items">
 
-            <div class="ui container">
-                <div class="ui large secondary inverted pointing menu">
-                    <a class="toc item">
-                        <i class="sidebar icon"></i>
-                    </a>
-                    <div class="item">
-                        <div class="ui tiny image">
-                            <img src="/img/logo.png">
-                        </div>
-                        <div class="middle aligned content">
-                            Suankularb Computer Week 2016 : The Lost Joker
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="ui text container slideInUp animated">
-                <img class="ui huge centered image zoomIn animated" src="/img/skic.png" alt="Logo">
-                <h1 class="ui inverted header slideInUp animated blue">Suankularb Olympiad in Informatics 2016</h1>
+                <img class="ui huge centered image zoomIn animated" src="/img/skit.png" alt="Logo">
+                <h1 class="ui inverted header slideInUp animated blue">Suankularb Information Technology Contest 2017</h1>
             </div>
 
         </div>
@@ -404,14 +371,14 @@
         <div class="ui inverted vertical footer segment">
             <div class="ui container">
                 <div class="ui inverted divider fluid"></div>
-                <div class="ui inverted height grid">
-                    <div class="two wide column">
-                        <img class="ui small image middle" src="/img/skcc.png" alt="Suankularb Computer Club">
-                    </div>
-                    <div class="twelve wide column middle">
-                        <p>
-                            <br> ชุมนุมคอมพิวเตอร์ โรงเรียนสวนกุหลาบวิทยาลัย<br /> อาคารสวนกุหลาบรำลึก (อาคาร 6) ชั้น 3<br /> 88 ถนนตรีเพชร แขวงวังบูรพาภิรมย์ เขตพระนคร กรุงเทพมหานคร 10200
-                        </p>
+                <div class="ui items">
+                    <div class="item">
+                        <div class="ui tiny image">
+                            <img src="/img/skcc.png">
+                        </div>
+                        <div class="middle aligned centered content hide-content">
+                            ชุมนุมคอมพิวเตอร์ โรงเรียนสวนกุหลาบวิทยาลัย<br /> อาคารสวนกุหลาบรำลึก (อาคาร 6) ชั้น 3<br /> 88 ถนนตรีเพชร แขวงวังบูรพาภิรมย์ เขตพระนคร กรุงเทพมหานคร 10200
+                        </div>
                     </div>
                 </div>
             </div>
