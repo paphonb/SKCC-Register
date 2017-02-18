@@ -6,12 +6,14 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="author" content="Suankularb Computer Club">
-  <meta name="description" content="สัปดาห์คอมพิวเตอร์ โรงเรียนสวนกุหลาบวิทยาลัย 2016 มาพร้อมนิทรรศการที่จะให้ทั้งความรู้ และความสนุก
-  และการแข่งขันต่าง ๆ ที่มีเงินรางวัลมูลค่ารวมกว่า 26,000 บาท พร้อมทั้งของรางวัลสุดพิเศษมากมายสำหรับทุกคน">
-  <meta property="og:title" content="Suankularb Computer Week 2016">
+  <meta name="description" content="การแข่งขันเขียนโปรแกรมแก้ปัญหาทางคอมพิวเตอร์
+		ที่ทั้ง สนุก เร้าใจ แปลกใหม่ และตื่นเต้นตลอดทั้งการแข่งขัน
+		ชิงเงินรางวัลมูลค่ารวมกว่า 6,000 บาท!!!">
+  <meta property="og:title" content="Suankularb Olympiad in informatics 2017">
   <meta property="og:image" content="#">
-  <meta property="og:description" content="สัปดาห์คอมพิวเตอร์ โรงเรียนสวนกุหลาบวิทยาลัย 2016 มาพร้อมนิทรรศการที่จะให้ทั้งความรู้ และความสนุก
-  และการแข่งขันต่าง ๆ ที่มีเงินรางวัลมูลค่ารวมกว่า 26,000 บาท พร้อมทั้งของรางวัลสุดพิเศษมากมายสำหรับทุกคน">
+  <meta property="og:description" content="สการแข่งขันเขียนโปรแกรมแก้ปัญหาทางคอมพิวเตอร์
+		ที่ทั้ง สนุก เร้าใจ แปลกใหม่ และตื่นเต้นตลอดทั้งการแข่งขัน
+		ชิงเงินรางวัลมูลค่ารวมกว่า 6,000 บาท!!!">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Icons -->
@@ -30,7 +32,7 @@
   <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 
   <!-- Site Properties -->
-  <title>Suankularb Computer Week 2016 : SKOI</title>
+  <title>Suankularb Olympiad in Informatics 2017 : SKOI17</title>
   <link rel="stylesheet" type="text/css" href="/dist/components/reset.css">
   <link rel="stylesheet" type="text/css" href="/dist/components/site.css">
 
@@ -123,11 +125,8 @@
           <i class="sidebar icon"></i>
         </a>
         <div class="item">
-          <div class="ui tiny image">
-            <img src="/img/logo.png">
-          </div>
             <div class="middle aligned content">
-              Suankularb Computer Week 2016 : The Lost Joker
+             
             </div>
         </div>
       </div>
@@ -136,14 +135,13 @@
     <div class="ui text container slideInUp animated">
       <img class="ui huge centered image zoomIn animated" src="/img/skoi.png" alt="Logo">
       <h1 class="ui inverted header slideInUp animated gold">
-        Suankularb Olympiad in Informatics 2016
+        Suankularb Olympiad in Informatics 2017
       </h1>
-      <h2>การแข่งขันเขียนโปรแกรมคอมพิวเตอร์ภาษา C/C++ ระดับมัธยมศึกษา โรงเรียนสวนกุหลาบวิทยาลัย 2016</h2>
+      <h2>การแข่งขันเขียนโปรแกรมคอมพิวเตอร์ภาษา C/C++ ระดับมัธยมศึกษา <br> โรงเรียนสวนกุหลาบวิทยาลัย 2017<br>วันที่ 7 มีนาคม 2560 ณ โรงเรียนสวนกุหลาบวิทยาลัย</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed
-        rhoncus neque. Pellentesque habitant morbi tristique senectus et
-        netus et malesuada fames ac turpis egestas. Maecenas sed ultricies
-        velit.
+		การแข่งขันเขียนโปรแกรมแก้ปัญหาทางคอมพิวเตอร์
+		ที่ทั้ง สนุก เร้าใจ แปลกใหม่ และตื่นเต้นตลอดทั้งการแข่งขัน
+		ชิงเงินรางวัลมูลค่ารวมกว่า 6,000 บาท!!!
       </p>
     </div>
 
@@ -163,9 +161,9 @@
         <div class="ten wide column">
           <h3 class="ui header">คุณสมบัติและเงื่อนไขของผู้เข้าแข่งขัน</h3>
           <ul class="ui list">
-            <li><p>เป็นนักเรียนที่กำลังศึกษาอยู่ในระดับชั้นมัธยมศึกษาปีที่ 1-6</p></li>
-            <li><p>1 ทีมมีสมาชิก 2 คน และทั้ง 2 คนต้องมาจากโรงเรียนเดียวกัน</p></li>
-            <li><p>แต่ละโรงเรียนสามารถส่งทีมเข้าร่วมการแข่งขันได้ไม่เกินโรงเรียนละ 3 ทีม</p></li>
+            <li><p>กำลังศึกษาอยู่ในระดับชั้นมัธยมศึกษาปีที่ 1 - 6 หรือเทียบเท่า</p></li>
+            <li><p>ทีมละไม่เกิน 2 คน จากโรงเรียนเดียวกัน พร้อมอาจารย์ที่ปรึกษา</p></li>
+            <li><p>แต่ละโรงเรียนสามารถส่งทีมเข้าร่วมการแข่งขันได้ไม่จำกัด</p></li>
             <li><p>แต่ละทีมต้องมีอาจารย์ที่ปรึกษาทีม 1 คนที่อยู่โรงเรียนเดียวกับผู้เข้าแข่งขัน</p></li>
             <li><p>หากเป็นโรงเรียนเดียวกันแต่คนละทีม สามารถใช้อาจารย์ที่ปรึกษาทีมคนเดียวกันได้</p></li>
           </ul>
@@ -186,25 +184,14 @@
     <div class="ui middle aligned stackable grid container inverted">
       <div class="row">
         <div class="eight wide column">
-          <h3 class="ui header inverted">รอบที่ 1</h3>
           <ul class="ui list inverted">
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+            <li><p>ใช้ภาษา C/C++ ในการแข่งขันแก้โจทย์ปัญหา</p></li>
+			<li><p>ผู้จัดการแข่งขันเตรียมคอมพิวเตอร์ไว้ให้ทีมละ 2 เครื่อง โดยมีโปรแกรม Dev-C++ 4.9.9.2 และ Code::Blocks 13.12</p></li>
+            <li><p>มีการแข่งขัน 2 รอบ รอบละ 3 ชั่วโมง</p></li>
+			<li><p>ใช้การตรวจผลระบบ Grader แบบ Complete Feedback (ตรวจแล้วรู้ผลเลย)</p></li>
+            <li><p>ผู้เข้าแข่งขันสามารถนำคีย์บอร์ดหรือเมาส์ของตนเองมาใช้ได้</p></li>
+            <li><p>สำหรับกฎกติกาเพิ่มเติมจะประกาศ ณ วันที่แข่งขัน</p></li>
           </ul>
-        </div>
-        <div class="eight wide column">
-          <h3 class="ui header inverted">รอบที่ 2</h3>
-          <ul class="ui list inverted">
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
-          </ul>
-        </div>
         </div>
       </div>
     </div>
@@ -277,12 +264,12 @@
             </thead>
             <tbody>
               <tr>
-                <td>วันนี้ - 24 พฤศจิกายน 2559</td>
+                <td>ตั้งแต่วันนี้เป็นต้นไป - วันก่อนการแข่งขัน</td>
                 <td>รับสมัครผู้เข้าร่วมการแข่งขัน</td>
               </tr>
               <tr>
-                <td>1 ธันวาคม 2559</td>
-                <td>Suankularb Olympiad in Informatics 2016</td>
+                <td>7 มีนาคม 2560</td>
+                <td>Suankularb Olympiad in Informatics 2017</td>
               </tr>
             </tbody>
           </table>
