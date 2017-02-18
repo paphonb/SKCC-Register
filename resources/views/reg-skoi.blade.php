@@ -86,6 +86,7 @@
 
                 });
     </script>
+    @include('google-analytics')
 </head>
 
 <body>
