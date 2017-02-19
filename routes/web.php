@@ -12,16 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    //return view('index');
+    return '';
 });
 
 // SKOI
-Route::get('/skoi','SKOIController@index')->name('skoi');
+//Route::get('/skoi','SKOIController@index')->name('skoi');
 Route::get('/skoi/register','SKOIController@register')->name('skoi-register');
 Route::post('/skoi/register','SKOIController@registerSubmit');
 
 // SKIT
-Route::get('/skit','SKITController@index')->name('skit');
+//Route::get('/skit','SKITController@index')->name('skit');
 Route::get('/skit/register','SKITController@register')->name('skit-register');
 Route::post('/skit/register','SKITController@registerSubmit');
 
