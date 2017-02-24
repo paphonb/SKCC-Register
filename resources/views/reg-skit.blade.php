@@ -217,6 +217,9 @@
                                         <div class="item" data-value="ม.4">ม.4</div>
                                         <div class="item" data-value="ม.5">ม.5</div>
                                         <div class="item" data-value="ม.6">ม.6</div>
+                                        <div class="item" data-value="ปวช.1">ปวช.1</div>
+                                        <div class="item" data-value="ปวช.2">ปวช.2</div>
+                                        <div class="item" data-value="ปวช.3">ปวช.3</div>
                                     </div>
                                 </div>
                             </div>
@@ -274,6 +277,9 @@
                                         <div class="item" data-value="ม.4">ม.4</div>
                                         <div class="item" data-value="ม.5">ม.5</div>
                                         <div class="item" data-value="ม.6">ม.6</div>
+                                        <div class="item" data-value="ปวช.1">ปวช.1</div>
+                                        <div class="item" data-value="ปวช.2">ปวช.2</div>
+                                        <div class="item" data-value="ปวช.3">ปวช.3</div>
                                     </div>
                                 </div>
                             </div>
@@ -331,6 +337,9 @@
                                         <div class="item" data-value="ม.4">ม.4</div>
                                         <div class="item" data-value="ม.5">ม.5</div>
                                         <div class="item" data-value="ม.6">ม.6</div>
+                                        <div class="item" data-value="ปวช.1">ปวช.1</div>
+                                        <div class="item" data-value="ปวช.2">ปวช.2</div>
+                                        <div class="item" data-value="ปวช.3">ปวช.3</div>
                                     </div>
                                 </div>
                             </div>
