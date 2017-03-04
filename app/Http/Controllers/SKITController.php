@@ -99,4 +99,9 @@ class SKITController extends Controller
         }
         return $baseRules;
     }
+
+    public function listStudents()
+    {
+        return view('special.students')->with('students', SKITStudent::all());
+    }
 }

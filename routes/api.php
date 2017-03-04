@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::middleware('auth:api')->get('/test', function (Request $request) {
+    return $request->toArray();
+});
+// Judge API System
+Route::middleware('auth:api')->post('/judge/result/progress', 'JudgeResultController@progress');
+Route::middleware('auth:api')->post('/judge/result/submit', 'JudgeResultController@submit');

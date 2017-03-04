@@ -54,6 +54,16 @@ class RegisterController extends Controller
         ]);
     }
 
+    public function showRegistrationForm()
+    {
+        return redirect('login');
+    }
+
+    public function register()
+    {
+
+    }
+
     /**
      * Create a new user instance after a valid registration.
      *
@@ -66,6 +76,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'api_token' => str_random(60)
         ]);
     }
 }

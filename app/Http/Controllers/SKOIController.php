@@ -104,4 +104,9 @@ class SKOIController extends Controller
         }
         return $baseRules;
     }
+
+    public function listStudents()
+    {
+        return view('special.students')->with('students', SKOIStudent::all());
+    }
 }
