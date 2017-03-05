@@ -56,6 +56,7 @@ class TaskController extends Controller
             $arr[$idx]['name'] = $tm->name();
             $arr[$idx]['time_limit'] = $tm->timeLimit();
             $arr[$idx]['memory_limit'] = $tm->memoryLimit();
+            $arr[$idx]['last'] = Submission::where('task_id', $task->id)->orderBy('updated_at', 'desc')->first();
         }
         return view('skoi.task')->with('tasks', $arr);
     }
@@ -71,6 +72,14 @@ class TaskController extends Controller
             throw new NotFoundHttpException();
         }
 
+    }
+
+    public function view($codeName)
+    {
+        $task = $this->task->where('code_name', $codeName)->firstOrFail();
+        $query = Submission::where('user_id', Auth::user()->id)->where('task_id', $task->id)->orderBy('updated_at', 'desc');
+        $submissions = $query->paginate(5);
+        return view('skoi.taskview')->with('codeName', $codeName)->with('submissions', $submissions);
     }
 
     public function getSubmit($codeName)

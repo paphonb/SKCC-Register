@@ -18,6 +18,7 @@ Route::get('/', function () {
 
 // SKOI
 //Route::get('/skoi','SKOIController@index')->name('skoi');
+Route::get('/skoi', 'HomeController@index');
 Route::get('/skoi/register','SKOIController@register')->name('skoi-register');
 Route::post('/skoi/register','SKOIController@registerSubmit');
 
@@ -32,18 +33,21 @@ Route::get('/game-master/register','GameMasterCampController@register');
 
 // Authentication
 Auth::routes();
-Route::get('/home', 'HomeController@index');
 
 // Task
 Route::get('/skoi/task', 'TaskController@index')->name('task');
+Route::get('/skoi/task/view/{codeName}', 'TaskController@view')->name('task-view');
 Route::get('/skoi/task/description/{codeName}', 'TaskController@description')->name('task-description');
 Route::get('/skoi/task/submit/{codeName}', 'TaskController@getSubmit')->name('task-submit');
 Route::post('/skoi/task/submit/{codeName}', 'TaskController@postSubmit')->name('task-submit-post');
 
-// Scoreboard
-Route::get('/skoi/scoreboard', function () {
-    return view('layouts.app');
-})->name('scoreboard');
+// Status
+Route::get('/skoi/status', 'StatusController@index')->name('status');
+
+// Messages
+Route::get('/skoi/message', 'MessageController@index')->name('message');
+Route::post('/skoi/message/submit', 'MessageController@postMessage')->name('submit-message');
+
 
 // Contest
 Route::get('/skoi/contest', 'ContestController@index')->name('contest');

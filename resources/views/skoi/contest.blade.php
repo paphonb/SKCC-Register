@@ -23,16 +23,12 @@
                         <td>{{$contest->start}}</td>
                         <td>{{$contest->end}}</td>
                         <td>
-                            <a href="#" class="btn btn-sm btn-info">View</a>
-                            @if(collect($contest->users->all())->contains('user_id',Auth::user()->id))
-                                <form id="contest-leave" method="post" action="{{route('contest-leave',$contest->id)}}">
-                                    {{csrf_field()}}
-                                </form>
-                                <a href="{{route('contest-leave',$contest->id)}}"
-                                   class="btn btn-sm btn-warning"
-                                   onclick="event.preventDefault();document.getElementById('contest-leave').submit();">Leave</a>
+                            <a href="{{route('contest-view',$contest->id)}}" class="btn btn-sm btn-info">View</a>
+                            @if($contest->users()->where('user_id',Auth::user()->id)->count() > 0)
+                                <a class="btn btn-sm btn-success">Entered</a>
                             @else
-                                <form id="contest-enter" method="post" action="{{route('contest-enter',$contest->id)}}">
+                                <form style="display: none" id="contest-enter" method="post"
+                                      action="{{route('contest-enter',$contest->id)}}">
                                     {{csrf_field()}}
                                 </form>
                                 <a href="{{route('contest-enter',$contest->id)}}"
