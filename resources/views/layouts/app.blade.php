@@ -51,6 +51,9 @@
                             TASKS</a></li>
                     <li><a href="{{ route('status')}}"><span class="glyphicon glyphicon-info-sign"
                                                              aria-hidden="true"></span> STATUS</a></li>
+                    <li><a href="{{ route('contest-scoreboard',1)}}"><span class="glyphicon glyphicon-star-empty"
+                                                                           aria-hidden="true"></span> CURRENT SCOREBOARD</a>
+                    </li>
                     <li><a href="{{ route('message')}}"><span class="glyphicon glyphicon-question-sign"
                                                               aria-hidden="true"></span> MESSAGES</a></li>
                     <li><a href="{{ route('contest')}}"><span class="glyphicon glyphicon-play-circle"

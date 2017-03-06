@@ -31,7 +31,15 @@
                                     <td>{{$task['name'] or $task['code_name']}} ({{$task['code_name']}})</td>
                                     <td><a href="{{route('task-description',$task['code_name'])}}">Download</a></td>
                                     <td>{{$task['last']->result or '-'}}</td>
-                                    <td>{{$task['last']->score or '-'}}</td>
+                                    @if(isset($task['last']))
+                                        @if($task['last']->score < 0)
+                                            <td>-</td>
+                                        @else
+                                            <td>{{$task['last']->score or '-'}}</td>
+                                        @endif
+                                    @else
+                                        <td>-</td>
+                                    @endif
                                     <td><a class="btn btn-info btn-sm" href="{{route('task-view',$task['code_name'])}}">View</a>
                                         <a class="btn btn-primary btn-sm"
                                            href="{{route('task-submit',$task['code_name'])}}">Submit</a>

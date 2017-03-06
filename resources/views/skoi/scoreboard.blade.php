@@ -15,7 +15,7 @@
                     <table class="table table-bordered table-hover">
                         <tghead>
                             <tr>
-                                <td width="5%"><strong>Rank</strong></td>
+                                <td width="5%"><strong>#</strong></td>
                                 <td><strong>Name</strong></td>
                                 @foreach($contest->tasks as $task)
                                     <td><strong>{{$task->code_name}}</strong></td>
@@ -24,7 +24,7 @@
                             </tr>
                         </tghead>
                         <tbody>
-                        @foreach($contest->users as $user)
+                        {{--@foreach($contest->users as $user)
                             <tr>
                                 @php
                                     $sum = [];
@@ -48,6 +48,16 @@
                                     >{{$sub->score or '-'}}</td>
                                 @endforeach
                                 <td>{{collect($sum)->sum(function($o){return $o->score ?? 0;})}}</td>
+                            </tr>
+                        @endforeach--}}
+                        @foreach($scoreboardArr as $user)
+                            <tr>
+                                <td>{{$loop->index+1}}</td>
+                                <td>{{$user->name}}</td>
+                                @foreach($user->tasks as $task)
+                                    <td class="{{$task->class}}">{{$task->score}}</td>
+                                @endforeach
+                                <td>{{$user->score}}</td>
                             </tr>
                         @endforeach
                         </tbody>

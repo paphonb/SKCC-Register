@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Judge\Submission;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class StatusController extends Controller
 {
@@ -18,7 +19,14 @@ class StatusController extends Controller
     public function index()
     {
         $query = $this->submission->orderBy('updated_at', 'desc');
-        $submissions = $query->paginate(10);
-        return view('skoi.status')->with('submissions', $submissions);
+        // filter frozen
+        // query exclusion list
+        $exclusions = DB::table('submissions_freeze')->get();
+        foreach ($exclusions as $ex) {
+            $query->whereNotBetween('created_at', [$ex->start, $ex->end]);
+        }
+        if (count($exclusions) > 0)
+            $query->orWhere('user_id', Auth::user()->id);
+        return view('skoi.status')->with('submissions', $query->paginate(10));
     }
 }

@@ -34,6 +34,10 @@ Route::get('/game-master/register','GameMasterCampController@register');
 // Authentication
 Auth::routes();
 
+Route::get('/home', function () {
+    return redirect('/skoi');
+});
+
 // Task
 Route::get('/skoi/task', 'TaskController@index')->name('task');
 Route::get('/skoi/task/view/{codeName}', 'TaskController@view')->name('task-view');

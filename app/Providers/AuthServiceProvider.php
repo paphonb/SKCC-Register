@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Judge\Contest;
+use Carbon\Carbon;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -28,6 +30,12 @@ class AuthServiceProvider extends ServiceProvider
         // Access contest
         Gate::define('access-contest', function ($user, $contest) {
             return $contest->users()->where('user_id', $user->id)->exists();
+        });
+        // Contest allow to submit
+        Gate::define('submit-contest', function ($user, Contest $contest) {
+            $start = Carbon::parse($contest->start);
+            $end = Carbon::parse($contest->end);
+            return Carbon::now()->between($start, $end);
         });
         // Admin
     }
