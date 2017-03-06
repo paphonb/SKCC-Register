@@ -20,4 +20,4 @@
 </IfModule>
 
 # Disable directory browsing
-Options -Indexes
+# Options -Indexes

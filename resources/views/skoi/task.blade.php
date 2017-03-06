@@ -20,6 +20,7 @@
                                 <td><strong>Name</strong></td>
                                 <td><strong>Description</strong></td>
                                 <td><strong>Latest Result</strong></td>
+                                <td><strong>Score</strong></td>
                                 <td><strong>Action</strong></td>
                             </tr>
                             </thead>
@@ -30,6 +31,7 @@
                                     <td>{{$task['name'] or $task['code_name']}} ({{$task['code_name']}})</td>
                                     <td><a href="{{route('task-description',$task['code_name'])}}">Download</a></td>
                                     <td>{{$task['last']->result or '-'}}</td>
+                                    <td>{{$task['last']->score or '-'}}</td>
                                     <td><a class="btn btn-info btn-sm" href="{{route('task-view',$task['code_name'])}}">View</a>
                                         <a class="btn btn-primary btn-sm"
                                            href="{{route('task-submit',$task['code_name'])}}">Submit</a>

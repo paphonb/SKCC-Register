@@ -10,6 +10,7 @@
         "doctrine/dbal": "^2.5",
         "laravel/framework": "5.4.*",
       "laravel/tinker": "~1.0",
+      "php-amqplib/php-amqplib": "dev-master",
       "mookofe/tail": "1.*"
     },
     "require-dev": {

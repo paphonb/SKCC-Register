@@ -39,7 +39,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
             </div>
@@ -95,6 +95,14 @@
     </nav>
 
     @yield('content')
+
+
+    <footer>
+        <div class="container">
+            <hr>
+            <p>© 2017 Suankularb Computer Club, All Right Reserved.</p>
+        </div>
+    </footer>
 </div>
 
 <!-- Scripts -->

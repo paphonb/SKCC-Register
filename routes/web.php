@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 // SKOI
 //Route::get('/skoi','SKOIController@index')->name('skoi');
-Route::get('/skoi', 'HomeController@index');
+Route::get('/skoi', 'HomeController@index')->name('home');
 Route::get('/skoi/register','SKOIController@register')->name('skoi-register');
 Route::post('/skoi/register','SKOIController@registerSubmit');
 
@@ -48,12 +48,14 @@ Route::get('/skoi/status', 'StatusController@index')->name('status');
 Route::get('/skoi/message', 'MessageController@index')->name('message');
 Route::post('/skoi/message/submit', 'MessageController@postMessage')->name('submit-message');
 
-
 // Contest
 Route::get('/skoi/contest', 'ContestController@index')->name('contest');
 Route::get('/skoi/contest/view/{id}', 'ContestController@view')->name('contest-view');
 Route::post('/skoi/contest/enter/{id}', 'ContestController@enter')->name('contest-enter');
 Route::post('/skoi/contest/leave/{id}', 'ContestController@leave')->name('contest-leave');
+
+// Scoreboard
+Route::get('/skoi/contest/scoreboard/{id}', 'ContestController@scoreboard')->name('contest-scoreboard');
 
 // TODO: Remove this ASAP
 // List students

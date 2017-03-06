@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Judge\Contest;
+use App\Judge\Submission;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class ContestController extends Controller
 {
@@ -26,10 +29,13 @@ class ContestController extends Controller
         return view('skoi.contest')->with('contests', $contest);
     }
 
-    public function view($id)
+    public function view($id, Request $request)
     {
         $contest = $this->contests->where('id', $id)->firstOrFail();
-        $tasks = $contest->tasks->all();
+        if (Gate::denies('access-contest', $contest)) {
+            return response()->redirectToRoute('contest');
+        }
+        $tasks = $contest->tasks()->where('contest_id', $contest->id)->get();
         return view('skoi.contestview')->with('contest', $contest)->with('tasks', $tasks);
     }
 
@@ -45,5 +51,17 @@ class ContestController extends Controller
         $contest = $this->contests->where('id', $id)->firstOrFail();
         $contest->users()->detach(Auth::user()->id);
         return response()->redirectToRoute('contest');
+    }
+
+    public function scoreboard($id)
+    {
+        $contest = $this->contests->where('id', $id)->firstOrFail();
+        $submissions = Submission::query();
+        return view('skoi.scoreboard')->with('contest', $contest)->with('submissions', $submissions);
+    }
+
+    private function computeNormalScore($id)
+    {
+
     }
 }

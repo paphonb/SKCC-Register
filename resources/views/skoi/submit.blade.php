@@ -37,6 +37,9 @@
                                 <p class="help-block">You can also open your local source file (Your browser must
                                     support HTML5 File API)</p>
                             </div>
+                            @if(!empty($redirect))
+                                <input type="hidden" name="redirect-target" value="{{$redirect['value']}}">
+                            @endif
                             <button type="submit" class="btn btn-primary">Submit</button>
                             <button onclick="window.history.back()" class="btn btn-default">Back</button>
                         </form>

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
+use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/skoi';
 
     /**
      * Create a new controller instance.
@@ -49,20 +49,20 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
+            'username' => 'required|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
         ]);
     }
 
-    public function showRegistrationForm()
+    /*public function showRegistrationForm()
     {
         return redirect('login');
-    }
+    }*/
 
-    public function register()
-    {
+    /* public function register()
+     {
 
-    }
+     }*/
 
     /**
      * Create a new user instance after a valid registration.
@@ -74,7 +74,7 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
-            'email' => $data['email'],
+            'username' => $data['username'],
             'password' => bcrypt($data['password']),
             'api_token' => str_random(60)
         ]);

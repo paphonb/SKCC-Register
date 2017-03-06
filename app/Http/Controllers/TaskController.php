@@ -8,9 +8,9 @@ use App\Judge\Task;
 use App\Judge\TaskData;
 use App\Judge\TaskModel;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class TaskController extends Controller
@@ -56,14 +56,14 @@ class TaskController extends Controller
             $arr[$idx]['name'] = $tm->name();
             $arr[$idx]['time_limit'] = $tm->timeLimit();
             $arr[$idx]['memory_limit'] = $tm->memoryLimit();
-            $arr[$idx]['last'] = Submission::where('task_id', $task->id)->orderBy('updated_at', 'desc')->first();
+            $arr[$idx]['last'] = Submission::where('task_id', $task->id)->where('user_id', Auth::user()->id)->orderBy('updated_at', 'desc')->first();
         }
         return view('skoi.task')->with('tasks', $arr);
     }
 
     public function description($codeName)
     {
-        $file = "tasks/" . $codeName . "/task.pdf";
+        $file = "tasks/" . $codeName . "/$codeName.pdf";
         if (Storage::exists($file)) {
             return response()->download(storage_path('app/' . $file), $codeName . ".pdf", [
                 'Content-Type: application/pdf'
@@ -82,14 +82,16 @@ class TaskController extends Controller
         return view('skoi.taskview')->with('codeName', $codeName)->with('submissions', $submissions);
     }
 
-    public function getSubmit($codeName)
+    public function getSubmit($codeName, Request $request)
     {
         $exampleCode = '';
         if (Storage::exists('example.cpp'))
             $exampleCode = Storage::get('example.cpp');
+        $redirect = ['redirect' => $request->get('redirect'), 'value' => $request->get('value')];
         return view('skoi.submit')
             ->with('exampleCode', $exampleCode)
-            ->with('codeName', $codeName);
+            ->with('codeName', $codeName)
+            ->with('redirect', $redirect);
     }
 
     public function postSubmit($codeName, Request $request)
@@ -114,6 +116,9 @@ class TaskController extends Controller
         $msg = new SubmissionMessage($submission);
         $msg->send();
         // redirect to home
-        return response()->redirectToRoute('task');
+        if ($request->has('redirect-target')) {
+            return redirect()->route('contest-view', ['id' => $request->get('redirect-target')]);
+        } else
+            return response()->redirectToRoute('task');
     }
 }
