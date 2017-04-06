@@ -25,12 +25,14 @@
                             <tbody>
                             @foreach($submissions as $submission)
                                 @php
-                                    $ip = $submission->result === "In progress" ||
-                                    $submission->result === "Compilation error" || $submission->result === "Judge error" ;
+                                    $ip = $submission->result === "" ||
+                                    $submission->result === "compilation error" || $submission->result === "judge error" ;
                                 @endphp
                                 <tr
-                                        @if($submission->result === "Compilation error")
+                                        @if($submission->result === "compilation error")
                                         class="warning"
+                                        @elseif($submission->result === "")
+                                        class="info"
                                         @elseif($submission->score >= 0 && $submission->score < 100)
                                         class="danger"
                                         @elseif($submission->score == 100)
@@ -40,7 +42,7 @@
                                     <td>{{$submission->user->username}}</td>
                                     <td>{{$submission->task->code_name}}</td>
                                     <td>{{$ip ? '-' : $submission->score}}</td>
-                                    <td>{{$submission->result}}</td>
+                                    <td><tt>{{$submission->result ?: "in progress"}}</tt></td>
                                     <td>{{$ip ? '-' : number_format($submission->time)}}</td>
                                     <td>{{$ip ? '-' : number_format($submission->memory)}}</td>
                                     <td width="15%">{{$submission->created_at}}</td>

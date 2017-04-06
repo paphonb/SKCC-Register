@@ -8,10 +8,11 @@
         "php": ">=5.6.4",
         "barryvdh/laravel-ide-helper": "^2.2",
         "doctrine/dbal": "^2.5",
+        "guzzlehttp/guzzle": "^6.2",
         "laravel/framework": "5.4.*",
-      "laravel/tinker": "~1.0",
-      "php-amqplib/php-amqplib": "dev-master",
-      "mookofe/tail": "1.*"
+        "laravel/tinker": "~1.0",
+        "mookofe/tail": "1.*",
+        "php-amqplib/php-amqplib": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

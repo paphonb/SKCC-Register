@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class JudgeResultController extends Controller
 {
-    private $status = ["!IP" => "In progress", "!JE" => "Judge error", "!CE" => "Compilation error"];
+    private $status = ["!IP" => "in progress", "!JE" => "judge error", "!CE" => "compilation error"];
 
     public function progress(Request $request)
     {
@@ -20,6 +20,7 @@ class JudgeResultController extends Controller
 
     public function submit(Request $request)
     {
+        
         $sub = Submission::where('id', $request->get('id'))->first();
         $sub->result = $request->get('result');
         $sub->compiler_message = $request->get('compilerMessage') ?? '';

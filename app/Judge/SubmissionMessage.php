@@ -38,11 +38,16 @@ class SubmissionMessage
     {
         $data = new SubmissionData(
             $this->submission,
-            new TaskData($this->submission->task->code_name)
+            $this->submission->task->code_name
         );
         $json = $data->jsonString();
-        Tail::add($this->queueName, $json, [
-            'content_type' => 'application/json'
+
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('POST', config('judge.baseurl') . config('judge.submiturl'), [
+            'headers' => [
+                'Content-Type' => 'application/json'
+            ],
+            'body' => $json
         ]);
     }
 

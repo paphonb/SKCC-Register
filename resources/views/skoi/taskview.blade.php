@@ -25,19 +25,22 @@
                                 <tbody>
                                 @foreach($submissions as $submission)
                                     @php
-                                        $ip = $submission->result === "In progress" ||
-                                        $submission->result === "Compilation error" || $submission->result === "Judge error" ;
+                                        $result = $submission->result ?: "in progress";
+                                        $ip = $result === "in progress" ||
+                                        $result === "compilation error" || $result === "judge error" ;
                                     @endphp
                                     <tr
-                                            @if($submission->result === "Compilation error")
+                                            @if($result === "compilation error")
                                             class="warning"
+                                            @elseif($result === "in progress")
+                                            class="info"
                                             @elseif($submission->score >= 0 && $submission->score < 100)
                                             class="danger"
                                             @elseif($submission->score == 100)
                                             class="success"
                                             @endif >
                                         <td>{{$submission->id}}</td>
-                                        <td>{{$submission->result}}</td>
+                                        <td>{{$result}}</td>
                                         <td>{{$ip ? '-' : $submission->score}}</td>
                                         <td>{{$ip ? '-' : number_format($submission->time)}}</td>
                                         <td>{{$ip ? '-' : number_format($submission->memory)}}</td>
@@ -51,7 +54,9 @@
                                             <button type="button"
                                                     data-toggle="modal"
                                                     data-target="#cm-modal-{{$submission->id}}"
-                                                    class="btn btn-warning btn-sm">Compiler message
+                                                    class="btn btn-warning btn-sm"
+                                                    @if(empty($submission->compiler_message))disabled @endif
+                                                    >Compiler message
                                             </button>
                                         </td>
                                     </tr>
@@ -78,6 +83,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    @if(!empty($submission->compiler_message))
                                     <!-- Compiler message -->
                                     <div class="modal fade" id="cm-modal-{{$submission->id}}" tabindex="-1"
                                          role="dialog" aria-labelledby="cm-modal-{{$submission->id}}-label">
@@ -91,11 +97,7 @@
                                                         compiler message</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    @if(!empty($submission->compiler_message))
-                                                        <pre>{{$submission->compiler_message}}</pre>
-                                                    @else
-                                                        <p class="help-block">No messages from compiler</p>
-                                                    @endif
+                                                    <pre>{{$submission->compiler_message}}</pre>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -105,6 +107,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    @endif
                                 @endforeach
                                 </tbody>
                             </table>

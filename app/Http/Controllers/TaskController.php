@@ -51,11 +51,8 @@ class TaskController extends Controller
         $arr = [];
         $tasks = $this->task->all();
         foreach ($tasks as $idx => $task) {
-            $tm = new TaskModel((new TaskData($task->code_name))->data());
             $arr[$idx]['code_name'] = $task->code_name;
-            $arr[$idx]['name'] = $tm->name();
-            $arr[$idx]['time_limit'] = $tm->timeLimit();
-            $arr[$idx]['memory_limit'] = $tm->memoryLimit();
+            $arr[$idx]['name'] = $task->display_name;
             $arr[$idx]['last'] = Submission::where('task_id', $task->id)->where('user_id', Auth::user()->id)->orderBy('updated_at', 'desc')->first();
         }
         return view('skoi.task')->with('tasks', $arr);
@@ -63,15 +60,10 @@ class TaskController extends Controller
 
     public function description($codeName)
     {
-        $file = "tasks/" . $codeName . "/$codeName.pdf";
-        if (Storage::exists($file)) {
-            return response()->download(storage_path('app/' . $file), $codeName . ".pdf", [
-                'Content-Type: application/pdf'
-            ]);
-        } else {
-            throw new NotFoundHttpException();
-        }
-
+        $client = new \GuzzleHttp\Client();
+        $res = $client->request('GET', config('judge.baseurl') . config('judge.descurl') . '/' . $codeName);
+        return response($res->getBody())
+            ->header('Content-Type', $res->getHeader('Content-Type'));
     }
 
     public function view($codeName)

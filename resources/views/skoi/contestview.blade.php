@@ -27,13 +27,29 @@
                                 <tbody>
                                 @foreach($tasks as $task)
                                     @php
-                                        $taskData = (new \App\Judge\TaskData($task->code_name))->data();
                                         $lastSub = \App\Judge\Task::lastSub($task);
                                     @endphp
-                                    <tr>
+                                    <tr
+                                        @php
+                                            $result = "-";
+                                            if ($lastSub) {
+                                                $result = $lastSub->result ?: "in progress";
+                                            }
+                                        @endphp
+                                        @if($lastSub)
+                                            @if($lastSub->result === "compilation error")
+                                                class="warning"
+                                                @elseif($lastSub->result === "")
+                                                class="info"
+                                                @elseif($lastSub->score >= 0 && $lastSub->score < 100)
+                                                class="danger"
+                                                @elseif($lastSub->score == 100)
+                                                class="success"
+                                            @endif
+                                        @endif >
                                         <td>{{$loop->index+1}}</td>
-                                        <td>{{$taskData->name.' ('.$task->code_name.')'}}</td>
-                                        <td>{{$lastSub->result or '-'}}</td>
+                                        <td>{{$task['name'] or $task['code_name']}} ({{$task['code_name']}})</td>
+                                        <td>{{$result}}</td>
                                         <td>{{$lastSub->score >= 0 ? $lastSub->score : '-' }}</td>
                                         <td><a class="btn btn-info btn-sm"
                                                href="{{route('task-view',$task->code_name)}}">View</a>

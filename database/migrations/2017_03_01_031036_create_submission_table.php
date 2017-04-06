@@ -16,6 +16,7 @@ class CreateSubmissionTable extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
             $table->string('code_name');
+            $table->string('display_name');
             $table->timestamps();
         });
         Schema::create('submissions', function (Blueprint $table) {

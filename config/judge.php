@@ -3,9 +3,10 @@
 return [
 
     /*
-     * Specify RabbitMQ connection for judge system
-     * default to 'default_connection'
+     * Specify connection for judge system
      */
-    'rabbitmq_connection' => config('tail.default', 'default_connection')
+    'baseurl' => env('JUDGE_BASEURL', 'http://localhost:3000/'),
+    'submiturl' => env('JUDGE_SUBMIT_URL', 'submit'),
+    'descurl' => env('JUDGE_DESC_URL', 'getDesc')
 
 ];

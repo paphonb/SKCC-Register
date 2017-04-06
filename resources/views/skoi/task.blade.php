@@ -26,11 +26,28 @@
                             </thead>
                             <tbody>
                             @foreach($tasks as $idx => $task)
-                                <tr>
+                                <tr
+                                    @php
+                                        $result = "-";
+                                        if ($task['last']) {
+                                            $result = $task['last']->result ?: "in progress";
+                                        }
+                                    @endphp
+                                    @if($task['last'])
+                                        @if($task['last']->result === "compilation error")
+                                            class="warning"
+                                            @elseif($task['last']->result === "")
+                                            class="info"
+                                            @elseif($task['last']->score >= 0 && $task['last']->score < 100)
+                                            class="danger"
+                                            @elseif($task['last']->score == 100)
+                                            class="success"
+                                        @endif
+                                    @endif >
                                     <td>{{$idx+1}}</td>
                                     <td>{{$task['name'] or $task['code_name']}} ({{$task['code_name']}})</td>
                                     <td><a href="{{route('task-description',$task['code_name'])}}">Download</a></td>
-                                    <td>{{$task['last']->result or '-'}}</td>
+                                    <td><tt>{{$result}}</tt></td>
                                     @if(isset($task['last']))
                                         @if($task['last']->score < 0)
                                             <td>-</td>

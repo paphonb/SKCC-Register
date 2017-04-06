@@ -82,7 +82,7 @@ class ContestController extends Controller
                 $before = Carbon::parse($contest->end)->subHours(1)->toDateTimeString();
                 $sub = Submission::where('user_id', $user->id)
                     ->where('task_id', $task->id)
-                    ->whereBetween('created_at', [$before, $contest->end])
+                    //->whereBetween('created_at', [$before, $contest->end])
                     ->orderBy('updated_at', 'desc')
                     ->first();
                 if (isset($sub->score)) {
@@ -91,7 +91,7 @@ class ContestController extends Controller
                     $tsk->score = '-';
                 }
                 // calculate color
-                if (isset($sub->result) && $sub->result === 'Compilation error') {
+                if (isset($sub->result) && $sub->result === 'compilation error') {
                     $tsk->class = 'warning';
                 } else if ($tsk->score === '-') {
                     $tsk->class = '';
@@ -105,7 +105,7 @@ class ContestController extends Controller
             }
             // sum field
             $usr->score = collect($sum)->sum(function ($tsk) {
-                return $tsk->score;
+                return $tsk->score === '-' ? 0 : $tsk->score;
             });
         }
         return collect($scoreboardArr)->sortByDesc('score')->values()->all();
