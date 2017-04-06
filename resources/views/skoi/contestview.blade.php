@@ -32,8 +32,12 @@
                                     <tr
                                         @php
                                             $result = "-";
+                                            $score = '-';
                                             if ($lastSub) {
                                                 $result = $lastSub->result ?: "in progress";
+                                                if ($lastSub->score >= 0) {
+                                                    $score = $lastSub->score;
+                                                }
                                             }
                                         @endphp
                                         @if($lastSub)
@@ -50,7 +54,7 @@
                                         <td>{{$loop->index+1}}</td>
                                         <td>{{$task['name'] or $task['code_name']}} ({{$task['code_name']}})</td>
                                         <td>{{$result}}</td>
-                                        <td>{{$lastSub->score >= 0 ? $lastSub->score : '-' }}</td>
+                                        <td>{{$score}}</td>
                                         <td><a class="btn btn-info btn-sm"
                                                href="{{route('task-view',$task->code_name)}}">View</a>
                                             <a class="btn btn-primary btn-sm"
