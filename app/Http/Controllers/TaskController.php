@@ -71,7 +71,11 @@ class TaskController extends Controller
         $task = $this->task->where('code_name', $codeName)->firstOrFail();
         $query = Submission::where('user_id', Auth::user()->id)->where('task_id', $task->id)->orderBy('updated_at', 'desc');
         $submissions = $query->paginate(5);
-        return view('skoi.taskview')->with('codeName', $codeName)->with('submissions', $submissions);
+        return response()->json([
+            'success' => true,
+            'codeName' => $codeName,
+            'submissions' => $submissions
+        ]);
     }
 
     public function getSubmit($codeName, Request $request)

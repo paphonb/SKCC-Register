@@ -27,21 +27,30 @@ class ContestController extends Controller
 
     public function index()
     {
-        $contest = $this->contests->all();
-        return view('skoi.contest')->with('contests', $contest);
+        $contests = $this->contests->all();
+        return response()->json([
+            'success' => true,
+            'contests' => $contests
+        ]);
     }
 
     public function view($id, Request $request)
     {
         $contest = $this->contests->where('id', $id)->firstOrFail();
         if (Gate::denies('access-contest', $contest)) {
-            return response()->redirectToRoute('contest');
+            return response()->json([
+                'success' => false
+            ]);
         }
         $tasks = $contest->tasks()->where('contest_id', $contest->id)->get();
         foreach ($tasks as $idx => $task) {
             $task['last'] = Submission::where('task_id', $task->id)->where('user_id', Auth::user()->id)->orderBy('updated_at', 'desc')->first();
         }
-        return view('skoi.contestview')->with('contest', $contest)->with('tasks', $tasks);
+        return response()->json([
+            'success' => true,
+            'contest' => $contest,
+            'tasks' => $tasks
+        ]);
     }
 
     public function enter($id)
