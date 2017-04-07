@@ -7,12 +7,12 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Your submissions for "{{$codeName}}"</div>
+                    <div class="panel-heading"><button onclick="window.history.back()" class="btn btn-default">Back</button> Your submissions for "{{$codeName}}"</div>
                     <div class="panel-body">
                         @if(!empty($submissions))
-                            <table class="table table-bordered table-hover">
+                            <table class="table table-hover">
                                 <thead>
-                                <tr class="active">
+                                <tr>
                                     <td><strong>ID</strong></td>
                                     <td><strong>Result</strong></td>
                                     <td><strong>Score</strong></td>
