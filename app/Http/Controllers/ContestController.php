@@ -38,6 +38,9 @@ class ContestController extends Controller
             return response()->redirectToRoute('contest');
         }
         $tasks = $contest->tasks()->where('contest_id', $contest->id)->get();
+        foreach ($tasks as $idx => $task) {
+            $task['last'] = Submission::where('task_id', $task->id)->where('user_id', Auth::user()->id)->orderBy('updated_at', 'desc')->first();
+        }
         return view('skoi.contestview')->with('contest', $contest)->with('tasks', $tasks);
     }
 

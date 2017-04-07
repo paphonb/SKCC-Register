@@ -27,7 +27,7 @@
                                 <tbody>
                                 @foreach($tasks as $task)
                                     @php
-                                        $lastSub = \App\Judge\Task::lastSub($task);
+                                        $lastSub = $task->last;
                                     @endphp
                                     <tr
                                         @php
