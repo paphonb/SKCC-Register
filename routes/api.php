@@ -33,6 +33,7 @@ Route::group([
         Route::post('/task/submit/{codeName}', 'TaskController@postSubmit')->name('task-submit-post');
 
         Route::get('/status', 'StatusController@index')->name('status');
+        Route::get('/status/next', 'StatusController@next')->name('status');
 
         Route::get('/message', 'MessageController@index')->name('message');
         Route::post('/message/submit', 'MessageController@postMessage')->name('submit-message');

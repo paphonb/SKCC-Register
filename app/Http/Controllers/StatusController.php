@@ -40,4 +40,13 @@ class StatusController extends Controller
             return view('skoi.status')->with('submissions', $submissions);
         }
     }
+
+    public function next(Request $request)
+    {
+        $client = new \GuzzleHttp\Client();
+        $response = $client->get(config('judge.baseurl') . config('judge.nexturl'));
+        return response()->json([
+            'success' => true
+        ]);
+    }
 }
