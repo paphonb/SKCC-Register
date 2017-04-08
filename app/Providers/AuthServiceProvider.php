@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Judge\Contest;
 use Carbon\Carbon;
+use Laravel\Passport\Passport;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -26,6 +27,10 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
+
+        Passport::routes();
+        Passport::enableImplicitGrant();
+        Passport::tokensExpireIn(Carbon::now()->addHours(6));
 
         // Access contest
         Gate::define('access-contest', function ($user, $contest) {

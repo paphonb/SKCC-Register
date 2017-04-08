@@ -40,7 +40,7 @@ Route::get('/home', function () {
 
 // Task
 Route::get('/skoi/task', 'TaskController@index')->name('task');
-//Route::get('/skoi/task/view/{codeName}', 'TaskController@view')->name('task-view');
+Route::get('/skoi/task/view/{codeName}', 'TaskController@view')->name('task-view');
 Route::get('/skoi/task/description/{codeName}', 'TaskController@description')->name('task-description');
 Route::get('/skoi/task/submit/{codeName}', 'TaskController@getSubmit')->name('task-submit');
 Route::post('/skoi/task/submit/{codeName}', 'TaskController@postSubmit')->name('task-submit-post');
@@ -53,8 +53,8 @@ Route::get('/skoi/message', 'MessageController@index')->name('message');
 Route::post('/skoi/message/submit', 'MessageController@postMessage')->name('submit-message');
 
 // Contest
-//Route::get('/skoi/contest', 'ContestController@index')->name('contest');
-//Route::get('/skoi/contest/view/{id}', 'ContestController@view')->name('contest-view');
+Route::get('/skoi/contest', 'ContestController@index')->name('contest');
+Route::get('/skoi/contest/view/{id}', 'ContestController@view')->name('contest-view');
 Route::post('/skoi/contest/enter/{id}', 'ContestController@enter')->name('contest-enter');
 Route::post('/skoi/contest/leave/{id}', 'ContestController@leave')->name('contest-leave');
 

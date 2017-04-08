@@ -13,22 +13,43 @@ class MessageController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Request $request)
     {
         $messages = Message::where('user_id', Auth::user()->id)->get();
-        return view('skoi.message')->with('messages', $messages);
+        if ($request->headers->get('accept') == 'application/json') {
+            return response()->json([
+                'success' => true,
+                'messages' => $messages
+            ]);
+        } else {
+            return view('skoi.message')->with('messages', $messages);
+        }
     }
 
     public function postMessage(Request $request)
     {
         $msg = $request->get('message');
-        if (empty($msg))
-            return response()->redirectToRoute('message')->with('alert-type', 'danger')->with('message', 'Empty message!');
+        if (empty($msg)) {
+            if ($request->headers->get('accept') == 'application/json') {
+                return response()->json([
+                    'success' => false,
+                    'error' => 'Empty message'
+                ]);
+            } else {
+                return response()->redirectToRoute('message')->with('alert-type', 'danger')->with('message', 'Empty message!');
+            }
+        }
         $message = new Message();
         $message->message = $msg;
         $message->user_id = Auth::user()->id;
         $message->response = "Waiting for response";
         $message->save();
-        return response()->redirectToRoute('message')->with('alert-type', 'success')->with('message', 'Message submitted!');
+        if ($request->headers->get('accept') == 'application/json') {
+            return response()->json([
+                'success' => true
+            ]);
+        } else {
+            return response()->redirectToRoute('message')->with('alert-type', 'success')->with('message', 'Message submitted!');
+        }
     }
 }

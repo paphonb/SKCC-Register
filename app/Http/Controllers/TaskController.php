@@ -66,16 +66,20 @@ class TaskController extends Controller
             ->header('Content-Type', $res->getHeader('Content-Type'));
     }
 
-    public function view($codeName)
+    public function view($codeName, Request $request)
     {
         $task = $this->task->where('code_name', $codeName)->firstOrFail();
         $query = Submission::where('user_id', Auth::user()->id)->where('task_id', $task->id)->orderBy('updated_at', 'desc');
         $submissions = $query->paginate(5);
-        return response()->json([
-            'success' => true,
-            'codeName' => $codeName,
-            'submissions' => $submissions
-        ]);
+        if ($request->headers->get('accept') == 'application/json') {
+            return response()->json([
+                'success' => true,
+                'codeName' => $codeName,
+                'submissions' => $submissions
+            ]);
+        } else {
+            return view('skoi.taskview')->with('codeName', $codeName)->with('submissions', $submissions);
+        }
     }
 
     public function getSubmit($codeName, Request $request)
@@ -94,27 +98,41 @@ class TaskController extends Controller
     {
         $task = $this->task->where('code_name', $codeName)->firstOrFail();
         $code = $request->get('sourceCode');
-        if (empty($code))
-            return view('skoi.submit')
-                ->with('error', true)
-                ->with('errorMessage', 'Empty source code!')
-                ->with('exampleCode', $code)
-                ->with('codeName', $codeName);
+        if (empty($code)) {
+            if ($request->headers->get('accept') == 'application/json') {
+                return response()->json([
+                    'success' => false,
+                    'error' => 'Empty source code'
+                ]);
+            } else {
+                return view('skoi.submit')
+                    ->with('error', true)
+                    ->with('errorMessage', 'Empty source code!')
+                    ->with('exampleCode', $code)
+                    ->with('codeName', $codeName);
+            }
+        }
         // add record to db
         $submission = new Submission();
         $submission->user_id = Auth::user()->id;
         $submission->task_id = $task->id;
         $submission->source_code = $code;
         $submission->compiler_message = '';
-        $submission->language = $this->langMap[$request->get('language') ?? 0];
+        $submission->language = $this->langMap['1'];
         $submission->save();
         // send to queue
         $msg = new SubmissionMessage($submission);
         $msg->send();
         // redirect to home
-        if ($request->has('redirect-target')) {
-            return redirect()->route('contest-view', ['id' => $request->get('redirect-target')]);
-        } else
-            return response()->redirectToRoute('task');
+        if ($request->headers->get('accept') == 'application/json') {
+            return response()->json([
+                'success' => true
+            ]);
+        } else {
+            if ($request->has('redirect-target')) {
+                return redirect()->route('contest-view', ['id' => $request->get('redirect-target')]);
+            } else
+                return response()->redirectToRoute('task');
+        }
     }
 }

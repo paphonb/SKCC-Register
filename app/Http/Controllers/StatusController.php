@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Judge\Submission;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -16,9 +17,11 @@ class StatusController extends Controller
         $this->submission = $submission;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $query = $this->submission->orderBy('updated_at', 'desc');
+        $query = $this->submission->orderBy('updated_at', 'desc')->with(['user', 'task'])->select([
+            'id', 'user_id', 'task_id', 'result', 'score', 'compiler_message', 'time', 'memory', 'created_at'
+        ]);
         // filter frozen
         // query exclusion list
         $exclusions = DB::table('submissions_freeze')->get();
@@ -27,6 +30,14 @@ class StatusController extends Controller
         }
         if (count($exclusions) > 0)
             $query->orWhere('user_id', Auth::user()->id);
-        return view('skoi.status')->with('submissions', $query->paginate(10));
+        $submissions = $query->paginate(10);
+        if ($request->headers->get('accept') == 'application/json') {
+            return response()->json([
+                'success' => true,
+                'submissions' => $submissions
+            ]);
+        } else {
+            return view('skoi.status')->with('submissions', $submissions);
+        }
     }
 }

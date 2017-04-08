@@ -25,32 +25,44 @@ class ContestController extends Controller
         $this->contests = $contests;
     }
 
-    public function index()
+    public function index(Request $request)
     {
         $contests = $this->contests->all();
-        return response()->json([
-            'success' => true,
-            'contests' => $contests
-        ]);
+        if ($request->headers->get('accept') == 'application/json') {
+            return response()->json([
+                'success' => true,
+                'contests' => $contests
+            ]);
+        } else {
+            return view('skoi.contest')->with('contests', $contests);
+        }
     }
 
     public function view($id, Request $request)
     {
         $contest = $this->contests->where('id', $id)->firstOrFail();
         if (Gate::denies('access-contest', $contest)) {
-            return response()->json([
-                'success' => false
-            ]);
+            if ($request->headers->get('accept') == 'application/json') {
+                return response()->json([
+                    'success' => false
+                ]);
+            } else {
+                return response()->redirectToRoute('contest');
+            }
         }
         $tasks = $contest->tasks()->where('contest_id', $contest->id)->get();
         foreach ($tasks as $idx => $task) {
             $task['last'] = Submission::where('task_id', $task->id)->where('user_id', Auth::user()->id)->orderBy('updated_at', 'desc')->first();
         }
-        return response()->json([
-            'success' => true,
-            'contest' => $contest,
-            'tasks' => $tasks
-        ]);
+        if ($request->headers->get('accept') == 'application/json') {
+            return response()->json([
+                'success' => true,
+                'contest' => $contest,
+                'tasks' => $tasks
+            ]);
+        } else {
+            return view('skoi.contestview')->with('contest', $contest)->with('tasks', $tasks);
+        }
     }
 
     public function enter($id)
@@ -67,11 +79,19 @@ class ContestController extends Controller
         return response()->redirectToRoute('contest');
     }
 
-    public function scoreboard($id)
+    public function scoreboard($id, Request $request)
     {
         $contest = $this->contests->where('id', $id)->firstOrFail();
         $scoreboardArr = $this->computeNormalScore($contest);
-        return view('skoi.scoreboard')->with('contest', $contest)->with('scoreboardArr', $scoreboardArr);
+        if ($request->headers->get('accept') == 'application/json') {
+            return response()->json([
+                'success' => true,
+                'contest' => $contest,
+                'scoreboard' => $scoreboardArr
+            ]);
+        } else {
+            return view('skoi.scoreboard')->with('contest', $contest)->with('scoreboardArr', $scoreboardArr);
+        }
     }
 
     private function computeNormalScore($contest)
